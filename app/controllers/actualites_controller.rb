@@ -16,7 +16,7 @@ class ActualitesController < ApplicationController
     @actualite = Actualite.create(actualite_params)
     respond_to do |format|
       if @actualite.save
-        format.html { redirect_to @actualite, notice: "Un nouvel objet vient d'être ajouté !" }
+        format.html { redirect_to @actualite, notice: "Un nouvel article vient d'être ajouté !" }
         format.json { render action: 'show', status: :created, location: @actualite }
       else
         format.html { render action: 'new' }
@@ -31,7 +31,7 @@ class ActualitesController < ApplicationController
   def update
     respond_to do |format|
       if @actualite.update(actualite_params)
-        format.html { redirect_to @actualite, notice: "Un nouvel objet vient d'être ajouté !" }
+        format.html { redirect_to @actualite, notice: "Un nouvel article vient d'être ajouté !" }
         format.json { render action: 'show', status: :created, location: @actualite }
       else
         format.html { render action: 'edit' }
@@ -54,7 +54,7 @@ class ActualitesController < ApplicationController
   end
 
   def actualite_params
-    params.require(:actualite).permit(:titre, :auteur, :contenu, :date)
+    params.require(:actualite).permit(:title, :auteur, :contenu, :date)
   end
 
 end

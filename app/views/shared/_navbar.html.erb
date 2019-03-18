@@ -1,18 +1,43 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
 
-  <div>
-    <ul>
-      <li><%= link_to "Equipe", equipe_path  %></li>
-      <li><%= link_to 'expertise', expertise_path   %></li>
-      <li><%= link_to "Valeurs", valeurs_path %></li>
-      <li><%= link_to "Actualites", actualites_path %></li>
+      <nav>
+            <span id="brand">
+                  <a href="/"><%= image_tag 'logo.svg'%></a>
+            </span>
+
+            <ul id="menu">
+                  <li><%= link_to "Equipe", equipe_path  %></li>
+                  <li><%= link_to 'Expertise', expertise_path   %></li>
+                  <li><%= link_to "Actualites", actualites_path %></li>
       <li><%= link_to "Contact", new_contact_path %></li>
       <li><%= link_to "Mentions legales", mentions_legales_path %></li>
+            </ul>
 
-    </ul>
-  </div>
-</div>
+            <div id="toggle" class="">
+                  <div class="span" id="one"></div>
+                  <div class="span" id="two"></div>
+                  <div class="span" id="three"></div>
+            </div>
+      </nav>
+
+      <div id="resize">
+            <ul id="menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">FAQ</a></li>
+            </ul>
+      </div>
+
+
+
+      <script>
+
+      $("#toggle").click(function() {
+
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+
+      });
+
+
+      </script>

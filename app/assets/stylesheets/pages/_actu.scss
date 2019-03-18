@@ -1,0 +1,54 @@
+.actu-container img {
+  height: 600px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.actu-index-container {
+  padding: 50px;
+  h1 {
+    color: $main-color;
+  } img {
+    width: 50px;
+  }
+}
+
+
+
+
+// test
+
+.date {
+  font-size: 45px;
+}
+
+.date-border {
+  border-left: 2px solid $main-color;
+}
+
+.article-border {
+  margin-bottom: 60px;
+} img{
+  width: 30px;
+  height: 30px;
+} h2 {
+  margin-top: 0;
+}
+
+.year {
+  font-size: 20px;
+  color: $main-color;
+}
+
+//test
+.textes-container {
+  background-image: image-url('quote.svg');
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: calc(130px - 0);;
+  right: 0;
+}
