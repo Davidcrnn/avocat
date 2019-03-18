@@ -1,1 +1,78 @@
-<h1>Actualités Index</h1>
+<div class="actu-container">
+  <%= image_tag 'banner3.jpg' %>
+</div>
+  <div class="navigation">
+  <%= link_to 'Ajouter une publication', new_actualite_path  %>
+
+  </div>
+<div class="actu-index-container">
+
+  <div data-aos="fade-left"
+    data-aos-offset="400"
+    data-aos-delay="5000"
+    data-aos-duration="3000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="false" class="text-center">
+
+  <h1>Nos dernières actualités</h1>
+  <%= image_tag 'quote.svg' %>
+  </div>
+
+<!--   <div class="row">
+    <#% @actualites.each do |actualite| %>
+    <div data-aos="zoom-in"
+    data-aos-offset="400"
+    data-aos-delay="5000"
+    data-aos-duration="3000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="false" class="col-xs-12 col-sm-6 col-md-4 article">
+      <div class="article_position">
+        <%#= image_tag 'edit.svg' %>
+      <h3><%#= actualite.title %></h3>
+
+      <h6><%##= actualite.contenu %> %></p>
+
+      </div>
+
+    </div>
+    <#% end %>
+  </div> -->
+
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-3 date-border">
+      <div class="date">10</div>
+      <span class="month">September</span> <br>
+      <span class="year">2019</span>
+    </div>
+    <div class="col-xs-12 col-md-9 article-border read-more">
+      <h2>Titre de l'article</h2>
+      <h6>Ecrit par :  Jean Duffour</h6>
+      <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+    </div>
+  </div>
+  </div>
+
+    <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-3 date-border">
+      <div class="date">10</div>
+      <span class="month">September</span> <br>
+      <span class="year">2019</span>
+    </div>
+    <div class="col-xs-12 col-md-9 article-border read-more">
+      <h2>Titre de l'article</h2>
+      <h6>Ecrit par :  Jean Duffour</h6>
+      <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+    </div>
+  </div>
+  </div>
+
+
+
+</div>
+
+<script>
+    AOS.init();
+  </script>
+

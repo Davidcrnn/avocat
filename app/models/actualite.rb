@@ -1,5 +1,5 @@
 class Actualite < ApplicationRecord
-  validates :titre, presence: true
+  validates :title, presence: true
   validates :contenu, presence: true
   validates :auteur, presence: true
   validates :date, presence: true

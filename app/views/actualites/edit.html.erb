@@ -1,1 +1,37 @@
-edit.html.erb
+ <div class="container container-margin">
+  <h1>Modifier une publication</h1>
+
+<div class="row">
+  <div class="col-md-12">
+<%= simple_form_for(@actualite, :html => { multipart: true }) do |f| %>
+ <% if @actualite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@actualite.errors.count, "erreur") %> empêchent l'objet d'être ajouté:</h2>
+
+      <ul>
+      <% @actualite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container-form">
+    <div class="champs">
+      <%= f.input :title, label: "Titre de l'article" %>
+      <%= f.input :contenu, label: "Contenu de l'article" %>
+      <%= f.input :date, label: 'Date de publication' %>
+      <%= f.input :auteur, label: 'Auteur' %>
+    </div>
+
+    <div class="actions btn-margin">
+      <%= f.button :submit, 'Valider' %>
+    </div>
+    <% end %>
+
+<p><%= link_to "RETOUR AUX ANNONCES", actualites_path, class: 'link-form'  %></p>
+  </div>
+
+     </div>
+</div>
+</div>

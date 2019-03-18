@@ -1,1 +1,91 @@
-<h1>Home Page</h1>
+<div class="home-container">
+  <div class="banner-container">
+ <ul class="rslides" id="slider2">
+  <li class="img-slider1"></li>
+  <li class="img-slider2"></li>
+  <li class="img-slider3"></li>
+
+</ul>
+</div>
+
+<div class="cabinet-description">
+  <div class="row">
+     <h1>Le Cabinet</h1> <hr class="style-one"></hr>
+
+  <div class="col-xs-12 col-md-6">
+    <div class="icon-position">
+
+      <%= image_tag 'court-justice.svg' %>
+    </div>
+    </div>
+      <div class="col-xs-12 col-md-6">
+      <p>
+    On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).
+  </p>
+    </div>
+  </div>
+</div>
+<div class="domaine-container">
+  <h1 class="text-center">Domaines d'expertise</h1>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 card">
+      <h3>Droit Social</h3>
+    </div><div class="col-xs-12 col-md-3 card">
+      <h3>Contentieux</h3>
+    </div><div class="col-xs-12 col-md-3 card">
+      <h3>Droit d'information</h3>
+    </div><div class="col-xs-12 col-md-3 card">
+      <h3>Droit de l'environnement</h3>
+    </div>
+  </div>
+</div>
+<div class="news-container">
+  <div class="text-center">
+
+  <h1>Nos Actualités</h1>
+  <%= image_tag 'quote.svg' %>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4 article">
+      <div class="article-position">
+        <%= image_tag 'edit.svg' %>
+      <h3>Titre de l'article</h3>
+      <h6>Date et auteur</h6>
+      <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions</p>
+
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4 article">
+      <div class="article-position">
+        <%= image_tag 'edit.svg' %>
+      <h3>Titre de l'article</h3>
+      <h6>Date et auteur</h6>
+      <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions</p>
+
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4 article">
+      <div class="article-position">
+        <%= image_tag 'edit.svg' %>
+      <h3>Titre de l'article</h3>
+      <h6>Date et auteur</h6>
+      <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(function () {
+   $("#slider2").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: false,
+        speed: 2000,
+        timeout: 5000,
+        namespace: "transparent-btns"
+      });
+    });
+</script>
