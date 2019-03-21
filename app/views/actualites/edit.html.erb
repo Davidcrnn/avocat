@@ -20,8 +20,18 @@
     <div class="champs">
       <%= f.input :title, label: "Titre de l'article" %>
       <%= f.input :contenu, label: "Contenu de l'article" %>
-      <%= f.input :date, label: 'Date de publication' %>
-      <%= f.input :auteur, label: 'Auteur' %>
+    <div class="row">
+      <div class="col-xs-4 margin-padding-null">
+        <%= f.input :day, label: 'Jour de publication', collection: 01..31, prompt: "Sélectionner un jour" %>
+      </div>
+      <div class="col-xs-4 margin-padding-null">
+        <%= f.input :month, label: 'Mois de publication', collection: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"], prompt: "Sélectionner un mois" %>
+      </div>
+      <div class="col-xs-4 margin-padding-null">
+        <%= f.input :year, label: 'Année de publication', collection: 2019..2025, prompt: "Sélectionner une année", selected: 2019 %>
+      </div>
+    </div>
+      <%= f.input :auteur, label: 'Auteur de la publication' %>
     </div>
 
     <div class="actions btn-margin">

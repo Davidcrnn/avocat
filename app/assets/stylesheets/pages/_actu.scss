@@ -8,6 +8,9 @@
 
 .actu-index-container {
   padding: 50px;
+  background: image-url('background.svg');
+  background-size: cover;
+  background-position: center;
   h1 {
     color: $main-color;
   } img {
