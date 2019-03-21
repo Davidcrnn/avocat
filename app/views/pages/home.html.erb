@@ -46,34 +46,17 @@
   <%= image_tag 'quote.svg' %>
   </div>
 
-
+  <% @actualites.each do |actualite| %>
   <div class="row">
     <div class="col-xs-12 col-md-4 article">
       <div class="article-position">
         <%= image_tag 'edit.svg' %>
-      <h3>Titre de l'article</h3>
-      <h6>Date et auteur</h6>
-      <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions</p>
-
+      <h3><%= actualite.title %></h3>
+      <h6><%= actualite.date %>/ <%= actualite.month %>/<%= actualite.year %> - <%= actualite.auteur %></h6>
+      <p><%= actualite.contenu %></p>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 article">
-      <div class="article-position">
-        <%= image_tag 'edit.svg' %>
-      <h3>Titre de l'article</h3>
-      <h6>Date et auteur</h6>
-      <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions</p>
-
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-4 article">
-      <div class="article-position">
-        <%= image_tag 'edit.svg' %>
-      <h3>Titre de l'article</h3>
-      <h6>Date et auteur</h6>
-      <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions</p>
-    </div>
-  </div>
+    <% end %>
 </div>
 
 

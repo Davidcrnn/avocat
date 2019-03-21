@@ -54,7 +54,7 @@ class ActualitesController < ApplicationController
   end
 
   def actualite_params
-    params.require(:actualite).permit(:title, :auteur, :contenu, :date)
+    params.require(:actualite).permit(:title, :auteur, :contenu, :day, :month, :year)
   end
 
 end
