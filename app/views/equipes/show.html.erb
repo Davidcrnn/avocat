@@ -1,0 +1,37 @@
+<div class="equipe-container">
+  <div class="container container-equipe">
+    <div class="navigation cool-link">
+      <%= link_to 'Accueil', '/'  %> / <%= link_to "Equipe", equipes_path  %> / <%= link_to "Modifier la biographie", edit_equipe_path(@equipe) %> / <%= link_to "Supprimer cette biographie", equipe_path(@equipe), method: :delete  %>
+    </div>
+    <div class="header-equipe text-center">
+      <%= image_tag 'team.svg' %>
+      <h2><%= @equipe.name %></h2>
+      <h4><%= @equipe.fonction %></h4>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="photo-container" style= "background-image: url('<%= cl_image_path @equipe.photo, height: 200, crop: :fill %>')">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-7">
+          <p><%= simple_format(h @equipe.bio)  %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 formation">
+          <h2>Formation</h2>
+          <p><%= simple_format(h @equipe.formation) %></p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 engagement">
+          <h2>Engagements</h2>
+          <p><%= simple_format(h @equipe.engagement) %></p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 engagement">
+          <h2>Contact</h2>
+          <p> <%= image_tag 'email.svg' %>  <%= simple_format(h @equipe.email) %></p>
+          <p><%= image_tag 'linkedin.svg' %>  <%= simple_format(h @equipe.linkedin) %></p>
+        </div>
+      </div>
+
+  </div>
+</div>

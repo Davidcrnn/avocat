@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
 <div class="row">
   <div class="col-xs-12">
   <div id="mapCanvas" style="width: auto; height: 300px; margin-top: 50px;"></div>
@@ -6,12 +6,12 @@
 </div>
 <div class="row">
   <div class="col-xs-12 col-md-4 contact-coordonnees">
-    <h2>Cabinet 107 Universités</h2>
+    <h2>Cabinet 107 Université</h2>
     <p>107 rue de l'université</p>
     <p>75007</p>
 
     <p>Tél: 01 54 54 54 54</p>
-    <p>Email: contact@107universites.com</p>
+    <p>Email: contact@107universite.com</p>
   </div>
   <div class="col-xs-12 col-md-8 form-container">
   <div class="row">
@@ -27,11 +27,11 @@
 
   </div>
   <div class="row col-xs-12">
-    <%= f.input :telephone, label: 'Votre téléphone (obligatoire)', :input_html => {:class => 'input-style'} %>
+    <%= f.input :telephone, label: 'Votre téléphone (obligatoire)',:required => true, :input_html => {:class => 'input-style'} %>
 
   </div>
   <div class="row col-xs-12">
-    <%= f.input :message, label: 'Votre message (obligatoire)', :as => :text, :required => false, :input_html => {:rows => 5, :class => 'input-style'} %>
+    <%= f.input :message, label: 'Votre message (obligatoire)',:required => true, :as => :text, :required => false, :input_html => {:rows => 5, :class => 'input-style'} %>
 
   </div>
     <div class="form-actions">

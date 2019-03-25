@@ -1,0 +1,89 @@
+<!-- <div class="footer-container">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 footer-column">
+      <h2>Navigation</h2>
+      <ul>
+        <li><#%= link_to "Accueil", '/'  %></li>
+        <li><#%= link_to "Expertise", '/'  %></li>
+        <li><#%= link_to "Equipe", equipes_path %></li>
+        <li><#%= link_to "Actualités", actualites_path  %></li>
+        <#% if user_signed_in? %>
+        <li><#%= link_to "Déconnexion", destroy_user_session_path  %></li>
+        <#% else %>
+        <li><#%= link_to "Admin", new_user_session_path  %></li>
+        <#% end %>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-4 footer-column">
+      <h2>Contact</h2>
+      <p>107 rue de l'université, Paris 7ème</p>
+      <p>Tél.: 01 45 45 45 45</p>
+    </div>
+    <div class="col-xs-12 col-sm-4 footer-column">
+      <h2>Nous contacter</h2>
+      <#%= link_to new_contact_path do  %>
+        <a href="" class="btn-contact">Contactez-nous</a>
+      <#% end %>
+    </div>
+
+  </div>
+</div>
+</div> -->
+<footer class="section bg-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="">
+                        <h3 class="footer-heading text-uppercase text-white">Navigation</h3>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><%= link_to "Accueil", '/'  %></li>
+                            <li><%= link_to "Expertise", '/'  %></li>
+                            <li><%= link_to "Equipe", equipes_path %></li>
+                            <li><%= link_to "Actualités", actualites_path  %></li>
+                              <% if user_signed_in? %>
+        <li><%= link_to "Déconnexion", destroy_user_session_path  %></li>
+        <% else %>
+        <li><%= link_to "Admin", new_user_session_path  %></li>
+        <% end %>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="">
+                        <h3 class="footer-heading text-uppercase text-white">Informations</h3>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><% if user_signed_in? %>
+        <li><%= link_to "Déconnexion", destroy_user_session_path  %></li>
+        <% else %>
+        <li><%= link_to "Admin", new_user_session_path  %></li></li>
+                            <% end %>
+                            <li><%= link_to "Mentions legales", mentions_legales_path  %></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="">
+                        <h3 class="footer-heading text-uppercase text-white">Contact</h3>
+                        <p class="contact-info mt-4">N'hésitez pas à nous contacter pour toutes informations.</p>
+                        <p class="contact-info">Tél: 01 45 45 45 45</p>
+                        <p class="contact-info">E-mail: contact@107universites.com</p>
+                        <%= link_to "Formulaire de contact", new_contact_path  %>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="footer-alt mb-0 f-14">2019 © 107universités, Tous droits réservés</p>
+        </div>
+    </footer>

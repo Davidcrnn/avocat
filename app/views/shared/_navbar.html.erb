@@ -1,25 +1,3 @@
-
-<!--    <div class="logo-container">
-     <a href="/"><#%= image_tag 'logo.svg'%></a>
-   </div>
- <div class="nav-container">
-
-
-   <div class="nav-container">
-     <ul>
-                <li><#%= link_to "Equipe", equipe_path  %></li>
-                <li><#%= link_to 'Expertise', expertise_path   %></li>
-                <li><#%= link_to "Actualites", actualites_path %></li>
-                <li><#%= link_to "Contact", new_contact_path %></li>
-      <li><#%= link_to "Mentions legales", mentions_legales_path %></li>
-
-            </ul>
-   </div>
-
- </div> -->
-
-
-
   <div class="nav-bar-container">
    <div class="logo-container">
     <a href="/" ><%= image_tag "logo.svg", id: "logo" %></a>
@@ -27,14 +5,13 @@
   </div>
 
 
-    <div class="link-primary" id="bs-megadropdown-tabs">
+    <div class="link-primary">
         <ul class="nav navbar-nav hidden-xs hidden-sm">
           <li><%= link_to "Accueil", '/'  %></li>
-            <li><%= link_to "Equipe", equipe_path  %></li>
+            <li><%= link_to "Equipe", equipes_path  %></li>
                 <li><%= link_to 'Expertise', expertise_path   %></li>
                 <li><%= link_to "Actualites", actualites_path %></li>
                 <li><%= link_to "Contact", new_contact_path %></li>
-      <li><%= link_to "Mentions legales", mentions_legales_path %></li>
 
         </ul>
 
@@ -42,6 +19,7 @@
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
+          <span class="letter">MENU</span>
         </div>
 
 </div>
@@ -49,18 +27,8 @@
 <div class="overlay">
   <div class="wrap">
     <ul class="wrap-nav">
-      <li><a href="#">Produits</a>
       <ul>
-        <li><%= link_to "Equipe", equipe_path  %></li>
-                <li><%= link_to 'Expertise', expertise_path   %></li>
-                <li><%= link_to "Actualites", actualites_path %></li>
-                <li><%= link_to "Contact", new_contact_path %></li>
-      <li><%= link_to "Mentions legales", mentions_legales_path %></li>
-      </ul>
-      </li>
-      <li><a href="#">Qui sommes-nous ?</a>
-      <ul>
-        <li><%= link_to "Equipe", equipe_path  %></li>
+        <li><%= link_to "Equipe", equipes_path  %></li>
                 <li><%= link_to 'Expertise', expertise_path   %></li>
                 <li><%= link_to "Actualites", actualites_path %></li>
                 <li><%= link_to "Contact", new_contact_path %></li>
@@ -73,23 +41,14 @@
 </div>
 
 <script>
-    $(document).ready(function(){
-    $(".hamburger").click(function(){
-        $(".overlay").fadeToggle(200);
-       $(this).toggleClass('btn-open').toggleClass('btn-close');
-    });
-});
-$('.overlay').on('click', function(){
-    $(".overlay").fadeToggle(200);
-    $(".hamburger").toggleClass('btn-open').toggleClass('btn-close');
-    open = false;
-});
+$(window).scroll(function() {
 
-$(document).ready(function(){
-  $(".hamburger").click(function(){
-    $(this).toggleClass("is-active");
-  });
-});
-
-
-</script>
+    if ($(this).scrollTop()>20)
+     {
+        $('.logo-container').hide();
+     }
+    else
+     {
+      $('.logo-container').show();
+     }
+ });</script>

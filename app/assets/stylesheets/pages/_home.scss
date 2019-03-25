@@ -1,7 +1,29 @@
-// .row {
-//   margin: 0;
-//   padding: 0;
-// }
+// test
+
+.modal-content {
+  border: none;
+  box-shadow: none;
+  h4 {
+    color: $main-color;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .article-position {
+    margin-bottom: 50px;
+  }
+
+}
+
+
+
+
+
+
+
 .home-container {
   width: 100%;
   margin: 0;
@@ -11,14 +33,21 @@
 .cabinet-description{
 
   height: auto;
-    padding: 0;
-  margin:50px;
+    padding: 80px 0;
   h1 {
     text-align: center;
     color: $main-color;
+  } img {
+    width: 250px;
+    height: 95px;
   }
 }
-
+.logo-cabinet {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
 hr.style-one {
     border: 0;
     height: 1px;
@@ -50,28 +79,35 @@ hr.style-one {
   background-size: cover;
 
 }
-
+.presentation-cabinet-background {
+  background-image: image-url('cabinet-background.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
 .text-center {
   text-align: center;
-  padding: 30px 0;
+  padding: 50px 0;
 }
 
 .card {
- border: 2px solid #00000038;
-    height: 400px;
+ border: 2px solid white;
+    height: 200px;
     display: flex;
     color: #f5f5f5b8;
     justify-content: center;
     align-items: center;
     opacity: 3.3;
-    background: #00000080;
-  h3 {
+    background: rgb(4,71,83);
+background: linear-gradient(90deg, rgba(4,71,83,0.9752275910364145) 0%, rgba(35,90,136,1) 35%, rgba(25,97,112,1) 86%);
+  h2 {
     text-align: center;
   }
 }
 
 .news-container {
   padding: 30px;
+
   h1 {
     color: $main-color;
 
@@ -82,8 +118,15 @@ hr.style-one {
   }
 }
 
+.actualite-container-background {
+   background: image-url('background.svg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+}
+
 .article {
-  height: 300px;
+  height: auto;
    display: flex;
 
     justify-content: center;
@@ -95,10 +138,28 @@ hr.style-one {
   h6 {
     font-style: italic;
     color: rgba(128,128,128,0.54);
+  } p {
+    margin-bottom: 20px;
+  }
+  a {
+    color: $main-color;
+        border: 2px solid $main-color;
+    padding: 7px 30px;
+  } a:hover {
+    background-color: $main-color;
+    color: white;
+    text-decoration: none;
   }
 }
 
-// .margin-padding-null {
-//   margin: 0;
-//   padding: 0;
-// }
+a.btn-all  {
+  color: white;
+        background-color: $main-color;
+    padding: 7px 30px;
+ &:hover {
+  background-color: white;
+    color: $main-color;
+    text-decoration: none;
+    border: 2px solid $main-color;
+}
+}

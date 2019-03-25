@@ -11,7 +11,7 @@ function initMap() {
 
     // Multiple markers location, latitude, and longitude
     var markers = [
-        ['107 rue de l"universités', 48.8611, 2.3111900000000105],
+        ['107 rue de l"université', 48.8611, 2.3111900000000105],
 
 
     ];
@@ -19,7 +19,7 @@ function initMap() {
     // Info window content
     var infoWindowContent = [
         ['<div class="info_content modal-content">' +
-        '<h3>Les Autruches</h3>'+'</div>'],
+        '<h4>Cabinet 107université</h4>'+'<p>107 rue de l"université, Paris 7ème</p>'+'<p>Tél: 01 45 45 45 45</p>'+'</div>'],
 
     ];
 
@@ -50,7 +50,7 @@ function initMap() {
 
     // Set zoom level
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(17);
+        this.setZoom(15.2);
         google.maps.event.removeListener(boundsListener);
     });
 

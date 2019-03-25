@@ -1,62 +1,112 @@
-<div class="home-container">
-  <div class="banner-container">
- <ul class="rslides" id="slider2">
-  <li class="img-slider1"></li>
-  <li class="img-slider2"></li>
-  <li class="img-slider3"></li>
+	<div class="home-container">
+	  <div class="banner-container">
+	 <ul class="rslides" id="slider2">
+	  <li class="img-slider1"></li>
+	  <li class="img-slider2"></li>
+	  <li class="img-slider3"></li>
 
-</ul>
-</div>
+	</ul>
+	</div>
+  <div class="presentation-cabinet-background">
 
-<div class="cabinet-description">
-  <div class="row">
-     <h1>Le Cabinet</h1> <hr class="style-one"></hr>
 
-  <div class="col-xs-12 col-md-6">
-    <div class="icon-position">
+	<div class=" container cabinet-description" data-aos="zoom-in"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+	  <div class="row">
+      <div class="col-xs-12 col-md-6 logo-cabinet">
+	     <h1><%= image_tag 'logo.svg' %></h1> <!-- <hr class="style-one"></hr> -->
 
-      <%= image_tag 'court-justice.svg' %>
-    </div>
-    </div>
-      <div class="col-xs-12 col-md-6">
-      <p>
-    On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).
-  </p>
-    </div>
-  </div>
-</div>
-<div class="domaine-container">
-  <h1 class="text-center">Domaines d'expertise</h1>
-  <div class="row">
-    <div class="col-xs-12 col-md-3 card">
-      <h3>Droit Social</h3>
-    </div><div class="col-xs-12 col-md-3 card">
-      <h3>Contentieux</h3>
-    </div><div class="col-xs-12 col-md-3 card">
-      <h3>Droit d'information</h3>
-    </div><div class="col-xs-12 col-md-3 card">
-      <h3>Droit de l'environnement</h3>
-    </div>
-  </div>
-</div>
-<div class="news-container">
-  <div class="text-center">
-
-  <h1>Nos Actualités</h1>
-  <%= image_tag 'quote.svg' %>
-  </div>
-
-  <% @actualites.each do |actualite| %>
-  <div class="row">
-    <div class="col-xs-12 col-md-4 article">
-      <div class="article-position">
-        <%= image_tag 'edit.svg' %>
-      <h3><%= actualite.title %></h3>
-      <h6><%= actualite.date %>/ <%= actualite.month %>/<%= actualite.year %> - <%= actualite.auteur %></h6>
-      <p><%= actualite.contenu %></p>
       </div>
-    </div>
-    <% end %>
+
+
+	      <div class="col-xs-12 col-md-6">
+	      <p>
+	    On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).
+	  </p>
+	    </div>
+	  </div>
+	</div>
+  </div>
+	<div class="domaine-container">
+	  <div class="container">
+
+
+	  <h1 class="text-center">Domaines d'expertise</h1>
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="fade-down-right"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true" >
+	      <h2 >Droit Social</h2>
+	    </div><div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="fade-down-left"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+	      <h2>Contentieux</h2>
+	    </div><div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="fade-up-right"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+	      <h2>Droit d'information</h2>
+	    </div><div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="fade-up-left"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+	      <h2>Droit de l'environnement</h2>
+	    </div>
+	  </div>
+	  </div>
+	</div>
+  <% if @actualites.count > 1  %>
+  <div class="actualite-container-background">
+
+	<div class="container news-container">
+	  <div class="text-center">
+	  <h1>Nos Actualités</h1>
+	  <%= image_tag 'quote.svg' %>
+	  </div>
+
+	  <% @actualites.each do |actualite| %>
+	  <div class="row">
+	    <div class="col-xs-12 col-md-4 article" data-aos="zoom-in"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+	      <div class="article-position">
+	        <%= image_tag 'edit.svg' %>
+	      <h4><%= h truncate(actualite.title, :length => 40) %></h4>
+	      <h6><%= actualite.day %>/ <%= actualite.month %>/<%= actualite.year %> - <%= actualite.auteur %></h6>
+	      <p><%=h truncate(actualite.contenu, :length => 280) %></p>
+	      <%= link_to "Lire la suite", actualite_path(actualite)  %>
+
+	      </div>
+	    </div>
+
+      <% end %>
+	</div>
+	<div class="text-center">
+	  <%= link_to "Voir toutes les publications", actualites_path, class: "btn-all"  %>
+	  </div>
+</div>
+</div>
+<% else %>
+
+<% end %>
+</div>
 </div>
 
 
@@ -72,3 +122,6 @@ $(function () {
       });
     });
 </script>
+<script>
+    AOS.init();
+  </script>

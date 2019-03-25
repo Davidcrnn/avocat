@@ -11,6 +11,7 @@
   background: image-url('background.svg');
   background-size: cover;
   background-position: center;
+  height: auto;
   h1 {
     color: $main-color;
   } img {
@@ -38,6 +39,9 @@
   height: 30px;
 } h2 {
   margin-top: 0;
+} p{
+  letter-spacing: 1px;
+  line-height: 25px;
 }
 
 .year {
@@ -55,3 +59,7 @@
   top: calc(130px - 0);;
   right: 0;
 }
+
+
+
+
