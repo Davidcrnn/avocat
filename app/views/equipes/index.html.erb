@@ -1,0 +1,59 @@
+
+
+<div class="equipe-container">
+  <div class="container container-equipe">
+    <div class="navigation">
+      <h6><%= link_to "Accueil", '/'  %> / L'Equipe / <%= link_to "Ajouter un nouveau membre", new_equipe_path  %></h6>
+    </div>
+    <div class="header-equipe text-center" data-aos="fade-left"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+      <h1 data-aos="fade-left"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">Notre Equipe</h1>
+      <%= image_tag 'team.svg' %>
+      <p data-aos="fade-right"
+    data-aos-offset="200"
+    data-aos-delay="5000"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">Notre équipe se compose d’avocats choisis pour leurs qualités académiques et
+leur aptitude à écouter, conseiller et défendre dans un environnement exigeant.
+
+Diplômés d’universités françaises et étrangères et de grandes écoles, nos avocats
+travaillent indistinctement en français et en anglais.
+
+Nous accordons une place essentielle à la formation continue. Nos avocats
+s’astreignent chaque année à des sessions de perfectionnement et de remise à niveau,
+afin de garantir à nos clients une sécurité juridique de premier plan.</p>
+    </div>
+    <% @equipes.each do |equipe| %>
+    <div class="row">
+      <%= link_to equipe_path(equipe) do %>
+      <div class="col-xs-12 col-sm-6 col-md-3 contain">
+        <div class="photo-container image " style= "background-image: url('<%= cl_image_path equipe.photo, height: 200, crop: :fill %>')">
+      </div>
+          <div class="card-text middle">
+            <div class="text-equipe">
+            <h3><%= equipe.name %></h3>
+            <h6><%= equipe.fonction %></h6>
+
+            </div>
+          </div>
+        </div>
+  <% end %>
+  <% end %>
+    </div>
+  </div>
+</div>
+
+<script>
+    AOS.init();
+  </script>
+

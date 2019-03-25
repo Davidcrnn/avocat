@@ -10,6 +10,8 @@ gem 'rails', '5.2.2'
 gem 'redis'
 gem 'mail_form'
 gem 'geocoder'
+gem 'carrierwave'
+gem 'cloudinary'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

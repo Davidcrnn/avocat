@@ -14,6 +14,4 @@ class PagesController < ApplicationController
   def valeurs
   end
 
-  def equipe
-  end
 end

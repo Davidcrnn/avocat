@@ -1,0 +1,60 @@
+ <div class="container container-margin">
+  <h1>Modifier le profil de <%= @equipe.name %></h1>
+
+<div class="row">
+  <div class="col-md-12">
+<%= simple_form_for(@equipe, :html => { multipart: true }) do |f| %>
+ <% if @equipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@equipe.errors.count, "erreur") %> empêchent l'objet d'être ajouté:</h2>
+
+      <ul>
+      <% @equipe.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container-form">
+ <div class="champs">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <%= f.input :name, label: "Nom" %>
+
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <%= f.input :fonction, label: "Poste occupé" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <%= f.input :email, label:"Email - Contact" %>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <%= f.input :linkedin, label: "LinkedIn" %>
+        </div>
+      </div>
+      <%= f.input :bio, label: "Biographie" %>
+        <%= f.input :engagement, label: 'Engagement' %>
+
+        <%= f.input :formation, label: 'Formation' %>
+
+
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+
+
+    </div>
+
+    <div class="actions btn-margin">
+      <%= f.button :submit, 'Valider' %>
+    </div>
+    <% end %>
+
+<p><%= link_to "RETOUR AUX ANNONCES", equipes_path, class: 'link-form'  %></p>
+  </div>
+
+     </div>
+</div>
+</div>
