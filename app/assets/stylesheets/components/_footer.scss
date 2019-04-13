@@ -44,3 +44,11 @@ background: linear-gradient(90deg, rgba(4,71,83,0.9752275910364145) 0%, rgba(35,
     display: block;
     border-bottom: 1px solid white;
 }
+
+a.btn-contact {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+}

@@ -30,10 +30,14 @@
   padding: 0;
 
 }
+
+.text-description {
+  padding: 10px 40px;
+}
 .cabinet-description{
 
   height: auto;
-    padding: 80px 0;
+    padding: 40px 0;
   h1 {
     text-align: center;
     color: $main-color;
@@ -91,17 +95,18 @@ hr.style-one {
 }
 
 .card {
- border: 2px solid white;
+ border: 2px solid #0000006b;
     height: 200px;
     display: flex;
     color: #f5f5f5b8;
     justify-content: center;
     align-items: center;
     opacity: 3.3;
-    background: rgb(4,71,83);
-background: linear-gradient(90deg, rgba(4,71,83,0.9752275910364145) 0%, rgba(35,90,136,1) 35%, rgba(25,97,112,1) 86%);
+   background: #ffffff33;
+
   h2 {
     text-align: center;
+    color: white;
   }
 }
 
@@ -157,7 +162,7 @@ a.btn-all  {
         background-color: $main-color;
     padding: 7px 30px;
  &:hover {
-  background-color: white;
+  background-color: transparent;
     color: $main-color;
     text-decoration: none;
     border: 2px solid $main-color;

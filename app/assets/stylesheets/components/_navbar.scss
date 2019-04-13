@@ -97,7 +97,7 @@ background: linear-gradient(90deg, rgba(4,71,83,0.9752275910364145) 0%, rgba(35,
   height:auto;
   width:100%;
   background:white;
-
+  z-index: 23;
   overflow:auto;
 }
 .wrap {
@@ -138,7 +138,7 @@ background: linear-gradient(90deg, rgba(4,71,83,0.9752275910364145) 0%, rgba(35,
 }
 .wrap ul.wrap-nav ul li a {
   color:black;
-      font-size: 25px;
+      font-size: 15px;
 }
 .wrap ul.wrap-nav ul li a:hover {
   text-decoration: underline;
@@ -207,7 +207,7 @@ background: linear-gradient(90deg, rgba(4,71,83,0.9752275910364145) 0%, rgba(35,
 }
 
 .hamburger .line{
-  width: 50px;
+  width: 30px;
   height: 2px;
   background-color: black;
   display: block;
@@ -241,6 +241,6 @@ background: linear-gradient(90deg, rgba(4,71,83,0.9752275910364145) 0%, rgba(35,
 }
 
 .letter {
-  letter-spacing: 2px;
-  font-weight: bold;
+  letter-spacing: 1px;
+
 }
