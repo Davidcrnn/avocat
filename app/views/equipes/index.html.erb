@@ -3,7 +3,7 @@
 <div class="equipe-container">
   <div class="container container-equipe">
     <div class="navigation">
-      <h6><%= link_to "Accueil", '/'  %> / L'Equipe / <%= link_to "Ajouter un nouveau membre", new_equipe_path  %></h6>
+      <h6><%= link_to "Accueil", '/'  %> / L'Equipe <% if user_signed_in? %> / <%= link_to "Ajouter un nouveau membre", new_equipe_path  %> <% end %></h6>
     </div>
     <div class="header-equipe text-center" data-aos="fade-left"
     data-aos-offset="200"

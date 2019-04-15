@@ -6,7 +6,7 @@
 
 
   <div class="navigation">
-  <%= link_to "Accueil", '/' %> / <%= link_to 'Ajouter une publication', new_actualite_path  %>
+  <%= link_to "Accueil", '/' %>  <% if user_signed_in? %> / <%= link_to 'Ajouter une publication', new_actualite_path  %> <% end %>
 
   </div>
 

@@ -1,7 +1,7 @@
 <div class="equipe-container">
   <div class="container container-equipe">
     <div class="navigation cool-link">
-      <%= link_to 'Accueil', '/'  %> / <%= link_to "Equipe", equipes_path  %> / <%= link_to "Modifier la biographie", edit_equipe_path(@equipe) %> / <%= link_to "Supprimer cette biographie", equipe_path(@equipe), method: :delete  %>
+      <%= link_to 'Accueil', '/'  %> / <%= link_to "Equipe", equipes_path  %> <% if user_signed_in? %> / <%= link_to "Modifier la biographie", edit_equipe_path(@equipe) %> / <%= link_to "Supprimer cette biographie", equipe_path(@equipe), method: :delete  %> <% end %>
     </div>
     <div class="header-equipe text-center">
       <%= image_tag 'team.svg' %>
@@ -18,18 +18,44 @@
         </div>
       </div>
       <div class="row">
+
         <div class="col-xs-12 col-sm-6 col-md-4 formation">
           <h2>Formation</h2>
+          <% if @equipe.formation.present? %>
           <p><%= simple_format(h @equipe.formation) %></p>
+          <% else %>
+            <p>Ces informations ne sont pas précisées.</p>
+          <% end %>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 engagement">
           <h2>Engagements</h2>
-          <p><%= simple_format(h @equipe.engagement) %></p>
+            <% if @equipe.engagement.present? %>
+              <p><%= simple_format(h @equipe.engagement) %></p>
+              <% else %>
+              <p>Ces informations ne sont pas précisées.</p>
+            <% end %>
+
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 engagement">
           <h2>Contact</h2>
-          <p> <%= image_tag 'email.svg' %>  <%= simple_format(h @equipe.email) %></p>
-          <p><%= image_tag 'linkedin.svg' %>  <%= simple_format(h @equipe.linkedin) %></p>
+          <div class="inline">
+            <% if @equipe.email.present? %>
+              <%= image_tag 'email.svg' %>  <%= simple_format(h @equipe.email) %>
+              <% else %>
+              <p> Non précisé</p>
+            <% end %>
+
+
+          </div>
+          <div class="inline">
+            <% if @equipe.linkedin.present? %>
+              <%= image_tag 'linkedin.svg' %> <a href="#{<%= simple_format(h @equipe.linkedin) %>}"></a>
+              <% else %>
+              <p> Non précisé</p>
+            <% end %>
+
+
+          </div>
         </div>
       </div>
 

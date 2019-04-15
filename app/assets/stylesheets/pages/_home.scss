@@ -18,7 +18,11 @@
 
 }
 
-
+@media screen and (max-width: 450px) {
+  .rslides {
+    height: 400px;
+  }
+}
 
 
 
@@ -32,7 +36,11 @@
 }
 
 .text-description {
-  padding: 10px 40px;
+  // padding: 10px 40px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 10px 20px;
 }
 .cabinet-description{
 
@@ -51,6 +59,7 @@
   justify-content: center;
   align-items: center;
   height: 250px;
+  // padding: 0;
 }
 hr.style-one {
     border: 0;
